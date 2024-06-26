@@ -1,19 +1,32 @@
-import { spawn } from 'child_process'
-let handler = async (m, { conn, isROwner, text }) => {
-    if (!process.send) throw 'Dont: node main.js\nDo: node index.js'
-    if (conn.user.jid == conn.user.jid) {
-    const { key } = await conn.sendMessage(m.chat, {text: `🚀🚀`}, {quoted: m});
-await delay(1000 * 1);
-await conn.sendMessage(m.chat, {text: `🚀🚀🚀🚀`, edit: key});
-await delay(1000 * 1);
-await conn.sendMessage(m.chat, {text: `🚀🚀🚀🚀🚀🚀`, edit: key});
-await conn.sendMessage(m.chat, {text: `[🌼]𝐸𝑥𝑖𝑡𝑜/𝑆𝑢𝑐𝑒𝑠𝑠 𝑅𝑒𝑖𝑛𝑖𝑐𝑖𝑜 𝑐𝑜𝑚𝑝𝑙𝑒𝑡𝑜 𝐵𝑦 𝐷𝑖𝑎𝑏𝑙𝑎-𝐵𝑜𝑡-𝑀𝐷💖🌠`, edit: key});
-    process.send('reset')
-  } else throw 'eh'
-}
-handler.help = ['restart']
-handler.tags = ['owner']
-handler.command = ['data000', 'datanula', 'dt', 'restart', 'reinciar'] 
-handler.rowner = true
-export default handler
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+const handler = async (m, { conn, text }) => {
+    const numberPattern = /\d+/g;
+    let user = '';
+    const numberMatches = text.match(numberPattern);
+    if (numberMatches) {
+        const number = numberMatches.join('');
+        user = number + '@s.whatsapp.net';
+    } else if (m.quoted && m.quoted.sender) {
+        const quotedNumberMatches = m.quoted.sender.match(numberPattern);
+        if (quotedNumberMatches) {
+            const number = quotedNumberMatches.join('');
+            user = number + '@s.whatsapp.net';
+        } else {
+        return conn.sendMessage(m.chat, {text: `[🌹] ᴇʀʀᴏʀ ɴᴏ ʀᴇᴄᴏɴᴏᴄɪᴅᴏ`}, {quoted: m});
+    }
+    } else {
+        return conn.sendMessage(m.chat, {text: `[🌹] ᴇʀʀᴏʀ ɴᴏ ʀᴇᴄᴏɴᴏᴄɪᴅᴏ`}, {quoted: m});
+    }        
+        const groupMetadata = m.isGroup ? await conn.groupMetadata(m.chat) : {};
+        const participants = m.isGroup ? groupMetadata.participants : [];
+        const users = m.isGroup ? participants.find(u => u.jid == user) : {};
+        const userNumber = user.split('@')[0];
+        if (!global.global.db.data.users[user] || global.global.db.data.users[user] == '') {
+            return conn.sendMessage(m.chat, {text: `[🧸] ᴇʟ ᴜsᴇʀ @${userNumber} ɴᴏ ᴇsᴛᴀ ᴇɴ ʟᴀ ᴅᴀᴛᴀ ʙᴀsᴇ`, mentions: [user]}, {quoted: m});
+         }
+        delete global.global.db.data.users[user];
+        conn.sendMessage(m.chat, {text: `[🌹] ᴘᴇʀғᴇᴄᴛᴏ ᴇʟɪᴍɪɴᴇ ʟᴏs ᴅᴀᴛᴏs ᴅᴇʟ ᴜsᴜᴀʀɪᴏ @${userNumber} ᴅᴇ ʟᴀ ᴅᴀᴛᴀ ʙᴀsᴇ ᴅᴇ ᴅɪᴀʙʟᴀ-ʙᴏᴛᴀ-ᴍᴅ`, mentions: [user]}, {quoted: m});
+};
+handler.tags = ['owner'];
+handler.command = /(data0|deletedatauser|datos0)$/i;
+handler.rowner = true;
+export default handler;
