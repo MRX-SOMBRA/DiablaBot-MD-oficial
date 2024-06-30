@@ -27,8 +27,8 @@ ${consejo}
     }
 };
 
-handler.help = ['consejo'];
+handler.help = ['consy'];
 handler.tags = ['frases'];
-handler.command = ['consejo'];
+handler.command = ['consy'];
 
 export default handler;
