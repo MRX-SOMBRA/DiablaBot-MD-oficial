@@ -1,3 +1,5 @@
+//créditos a https://github.clm/matias-crypto 
+
 var handler = async (m, { text, conn }) => {
     if (!text) return conn.reply(m.chat, `🎌 *Ingrese el texto que quiere convertir a mayúsculas*\n\nEjemplo, !uppercase [texto]`, m);
 
