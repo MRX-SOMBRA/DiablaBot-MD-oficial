@@ -10,9 +10,9 @@ var handler = async (m, { text, conn }) => {
     }
 };
 
-handler.help = ['calculate'];
+handler.help = ['calcula'];
 handler.tags = ['tools'];
-handler.command = /^calculate$/i;
+handler.command = /^calcula$/i;
 
 handler.register = true;
 handler.limit = true;
