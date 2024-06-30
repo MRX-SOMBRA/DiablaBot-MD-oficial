@@ -3,7 +3,9 @@ import fetch from 'node-fetch';
 const handler = async (m, { conn }) => {
     try {
         const response = await fetch('https://api.quotable.io/random?tags=inspirational|life');
-        if (!response.ok) throw 'API error';
+        if (!response.ok) {
+            throw new Error(`API error: ${response.statusText}`);
+        }
 
         const data = await response.json();
         const consejo = data.content;
@@ -27,8 +29,8 @@ ${consejo}
     }
 };
 
-handler.help = ['consy'];
+handler.help = ['consejo'];
 handler.tags = ['frases'];
-handler.command = ['consy'];
+handler.command = ['consejo'];
 
 export default handler;
