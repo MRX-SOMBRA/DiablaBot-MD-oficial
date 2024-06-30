@@ -1,3 +1,5 @@
+//créditos matias-crypto 
+
 var handler = async (m, { text, conn }) => {
     if (!text) return conn.reply(m.chat, `🎌 *Ingrese la cantidad de kilómetros que quiere convertir a millas*\n\nEjemplo, !km2miles 10`, m);
 
