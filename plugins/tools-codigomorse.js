@@ -1,3 +1,5 @@
+//hecho por matias-crypto 
+
 var handler = async (m, { text, conn }) => {
     if (!text) return conn.reply(m.chat, `🎌 *Ingrese el texto que quiere convertir a código Morse*\n\nEjemplo, !morse [texto]`, m);
 
