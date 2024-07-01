@@ -2,7 +2,7 @@ import { search, download } from 'aptoide-scraper'
 
 var handler = async (m, {conn, usedPrefix, command, text}) => {
 
-if (!text) return conn.reply(m.chat, '🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *іᥒgrᥱsᥱ ᥱᥣ ᥒ᥆mᑲrᥱ ძᥱ ᥣᥲ ᥲ⍴k 𝗊ᥙᥱ ᥱs𝗍ᥲ ᑲᥙsᥴᥲᥒძ᥆*', m, fake, )
+if (!text) return conn.reply(m.chat, '🌆 ᴇʀʀᴏʀ 🌆 *ɪɴɢʀᴇsᴇ́ ᴇʟ ɴᴏᴍʙʀᴇ ᴅᴇ ʟᴀ ᴀᴘᴋ ǫᴜᴇ ᴇsᴛᴀ ʙᴜsᴄᴀɴᴅᴏ*', m, fake, )
 
 try {
  
