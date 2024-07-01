@@ -2,7 +2,7 @@ import yts from 'yt-search'
 
 var handler = async (m, { text, conn, args, command, usedPrefix }) => {
 
-if (!text) return conn.reply(m.chat, `🎌 *Escriba el título de algún vídeo de Youtube*\n\nEjemplo, !${command} NovaBot`, m, fake, )
+if (!text) return conn.reply(m.chat, `🪷 *𝐄𝐬𝐜𝐫𝐢𝐛𝐚 𝐭𝐢𝐭𝐮𝐥𝐨 𝐝𝐞 𝐚𝐥𝐠𝐮𝐧 ví𝐝𝐞𝐨 𝐝𝐞 𝐘𝐨𝐮𝐭𝐮𝐛𝐞*\n\nEjemplo, !${command} NovaBot`, m, fake, )
 
 let results = await yts(text)
 let tes = results.all
