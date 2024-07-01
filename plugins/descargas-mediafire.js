@@ -7,7 +7,7 @@ let limit
 if((isOwner || isPrems)) limit = 1000
 else limit = 600
 
-if (!args[0]) return conn.reply(m.chat, `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *іᥒgrᥱsᥱ ᥙᥒ ᥱᥒᥣᥲᥴᥱ ძᥱ mᥱძіᥲ𝖿іrᥱ*\n\n[ 💡 ] ᥱȷᥱm⍴ᥣ᥆, !mediafire https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk`, m, fake, )
+if (!args[0]) return conn.reply(m.chat, `🐣 𝑬𝑹𝑹𝑶𝑹 🐣 *𝒊𝒏𝒈𝒓𝒆𝒔𝒆́ 𝒖𝒏 𝒆𝒏𝒍𝒂𝒄𝒆́ 𝒅𝒆 𝒎𝒆𝒅𝒊𝒂𝒇𝒊𝒓𝒆*\n\n[ 💫 ] 𝒆𝒋𝒆𝒎𝒑𝒍𝒐, !mediafire https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk`, m, fake, )
 if (!args[0].match(/mediafire/gi)) conn.reply(m.chat, `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *ᥱᥒᥣᥲᥴᥱ іᥒᥴ᥆rrᥱᥴ𝗍᥆*`, m, fake, )
 
 try {
