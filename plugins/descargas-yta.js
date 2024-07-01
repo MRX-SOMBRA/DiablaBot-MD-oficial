@@ -5,7 +5,7 @@ import ytdl from 'ytdl-core'
 
 var handler = async (m, { text, conn, args, usedPrefix, command }) => {
 
-if (!args[0]) conn.reply(m.chat, '*🚫 𝐄𝐑𝐑𝐎𝐑 🚫 іᥒgrᥱsᥱ ᥙᥒ ᥴ᥆mᥲᥒძ᥆ + ᥙᥒ ᥱᥒᥣᥲᥴᥱ ძᥱ ᥡ᥆ᥙ𝗍ᥙᑲᥱ*',  m, fake, )
+if (!args[0]) conn.reply(m.chat, '*🌠 𝑬𝑹𝑹𝑶𝑹 🌠 𝒊𝒏𝒈𝒓𝒆𝒔𝒆́ 𝒖𝒏 𝒄𝒐𝒎𝒂𝒏𝒅𝒐 + 𝒖𝒏 𝒆𝒏𝒍𝒂𝒄𝒆𝒔 𝒅𝒆 𝒚𝒐𝒖𝒕𝒖𝒃𝒆*',  m, fake, )
 
 let youtubeLink = ''
 if (args[0].includes('you')) {
