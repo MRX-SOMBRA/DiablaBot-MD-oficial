@@ -1,4 +1,4 @@
-import countries from './Frases-librery/mensajes.js';
+import countries from './Frases-librery/paises.js';
 
 const handler = async (m, { conn }) => {
     try {
