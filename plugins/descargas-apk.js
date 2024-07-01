@@ -1,6 +1,6 @@
 import { search, download } from 'aptoide-scraper'
 let handler = async (m, { conn, usedPrefix, command, text }) => {
-if (!text) throw `*🚫 𝐄𝐑𝐑𝐎𝐑 🚫*\n[ 💡 ] ᥱȷᥱm⍴ᥣ᥆ ${usedPrefix + command} WhatsApp Plus`
+if (!text) throw `*✨ 𝗘𝗥𝗥𝗢𝗥 ✨*\n[ 🔥 ] 𝗲𝗷𝗲𝗺𝗽𝗹𝗼 ${usedPrefix + command} WhatsApp Plus`
 try {
 const searchResult = await search(text)
 const data = await download(searchResult[0].id)
