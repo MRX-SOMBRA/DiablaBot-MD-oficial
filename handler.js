@@ -436,7 +436,7 @@ console.error(e)
 }
 }
 if (m.diamond)
-m.reply(`💎 Se a utilizado un *${+m.diamond}* diamante`)
+m.reply(`💎 𝑺𝒆 𝒂 𝒖𝒕𝒊𝒍𝒊𝒛𝒂𝒅𝒐 𝒖𝒏 *${+m.diamond}* 𝒅𝒊𝒂𝒎𝒂𝒏𝒕𝒆`)
 }
 break
 }
