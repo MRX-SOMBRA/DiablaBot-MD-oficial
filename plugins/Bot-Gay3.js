@@ -1,7 +1,7 @@
 import yts from 'yt-search'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 
-        if (!text) throw `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 іᥒgrᥱsᥲ ᥱᥣ 𝗍і́𝗍ᥙᥣ᥆ ძᥱ ᥙᥒᥲ ᥴᥲᥒᥴі᥆́ᥒ\n\n[ 📌 ] ᥱȷᥱm⍴ᥣ᥆ *${usedPrefix + command}* Lil Peep hate my life`
+        if (!text) throw `🪷 𝐄𝐑𝐑𝐎𝐑 🪷 𝐢𝐧𝐠𝐫𝐞𝐬𝐚 𝐞𝐥 𝐭𝐢𝐭𝐮𝐥𝐨 𝐝𝐞 𝐮𝐧𝐚 𝐜𝐚𝐧𝐜𝐢𝐨𝐧\n\n[ 📌 ] 𝐞𝐣𝐞𝐦𝐩𝐥𝐨 *${usedPrefix + command}* Lil Peep hate my life`
         let res = await yts(text)
         let vid = res.videos[0]
         if (!vid) throw `🚫 𝐀𝐓𝐄𝐍𝐂𝐈𝐎𝐍 🚫 ᥎і́ძᥱ᥆/ᥲᥙძі᥆ ᥒ᥆ ᥱᥒᥴ᥆ᥒ𝗍rᥲძ᥆`
