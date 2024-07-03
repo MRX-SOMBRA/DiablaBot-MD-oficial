@@ -40,7 +40,9 @@ _${formatDate}_
 *Ciudad*: ${ciudad}
 
 !allmenu
-_(Para ver el menú completo)_`
+_(Para ver el menú completo)_
+
+> Powered By MoonLight Team`
 
 await conn.reply(m.chat, menu, a, { contextInfo: { externalAdReply: {title: '👋 ¡Hola!', body: saludo, sourceUrl: ig, thumbnail: await (await fetch(pp)).buffer() }}})
 
