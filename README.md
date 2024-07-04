@@ -38,7 +38,7 @@
 - #### 🚩 Instalacion Automatica Por Termux
 [![blog](https://img.shields.io/badge/Instalacion-Automatica-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/smoWgg28wPk?si=ck-t9tvKrJQ0yZbS?feature=share)
 
-> Comandos Para Instalar CuriosityBot Forma Automatica Por Termux.
+> Comandos Para Instalar Diabla-Bot Forma Automatica Por Termux.
 
 ```bash
 termux-setup-storage
@@ -99,17 +99,17 @@ npm start
 ```bash
 grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/EnzoVaselevich/DiablaBot-MD-oficial-MD/master/update.sh | bash
 ```
-Para que no pierda su progreso en CuriosityBot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
+Para que no pierda su progreso en Diabla-Bot, estos comandos realizarán un respaldo de su `database.json` y se agregará a la versión más reciente.
 
 > Warning Estos comandos solo funcionan para TERMUX, REPLIT, LINUX
 
 - #### 🎌 Para Activar 24/7 (Termux)
-> Este Comando Deve Ir En La Carpeta  DiablaBot-MD
+> Este Comando Debe Ir En La Carpeta  DiablaBot-MD
 ```bash
 > npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ```
 ----
-- ### 🎌 Instalacion Por Code Dpace
+- ### 🎌 Instalacion Por Code Space
 
 [`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=basicLinux32gb&repo=674862525&ref=main&geo=UsEast)
 ***
