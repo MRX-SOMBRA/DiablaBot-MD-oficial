@@ -9,7 +9,7 @@ import { fileURLToPath, pathToFileURL } from 'url'
 
  global.owner = [
 ['5491168758497', '🍁 𝗢𝘄𝗻𝗲𝗿 - 𝗖𝗹𝗲𝗮𝘁𝗼𝗿 🐼', true],
-['5492215034412', '🪷 𝐌𝐚𝐭𝐢𝐬𝐬 - 𝐂𝐫𝐢𝐩𝐭𝐨𝐎𝐅𝐂 🌠', true];
+['5492215034412', '🪷 𝐌𝐚𝐭𝐢𝐬𝐬 - 𝐂𝐫𝐢𝐩𝐭𝐨𝐎𝐅𝐂 🌠', true],
 ['527561175278', 'Matias2 Owner', true]]
 
 //BETA: Si quiere evitar escribir el número que será bot en la consola, agregué desde aquí entonces:
