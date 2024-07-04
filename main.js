@@ -312,7 +312,10 @@ console.log(chalk.yellow('⚠️ㅤEscanea este codigo QR, el codigo QR expira e
 if (connection == 'open') {
 await conn.groupAcceptInvite('LhlBSyakvI3GjGSvFTa1hh')
 console.log(chalk.bold.cyan('\n╭────────────── • DiablaBot-MD 🍂 • ─────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰────────────── • DiablaBot-MD 🍂 • ─────────────◉\n'))}
-//conn.fakeReply('5491168758497@s.whatsapp.net', '😄', '0@s.whatsapp.net', '😸 Soy NilouBot\nRecientemente Me E Conectado', '0@s.whatsapp.net')}
+//if (conn.user.connect) {
+//conn.fakeReply('5217294888993@s.whatsapp.net', '😃', '0@s.whatsapp.net', '😅 Soy DiablaBot\nRecientemente me e conectado', '0@s.whatsapp.net')
+//conn.user.connect = true;
+//}
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) { 
 await fs.unlinkSync("./sessions/" + "creds.json")
