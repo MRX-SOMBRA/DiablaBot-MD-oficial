@@ -227,10 +227,11 @@ if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 't
 
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
-//async function clearTmp() {
- // const tmp = [tmpdir(), join(__dirname, './tmp')]
-  //const filename = []
-  //tmp.forEach(dirname => readdirSync(dirname).forEach(file => /filename.push(join(dirname, file))))
+async function clearTmp() {
+  const tmp = [tmpdir(), join(__dirname, './tmp')]
+  const filename = []
+  tmp.forEach(dirname => readdirSync(dirname).forEach(file =>
+filename.push(join(dirname, file))))
 
   return filename.map(file => {
     const stats = statSync(file)
