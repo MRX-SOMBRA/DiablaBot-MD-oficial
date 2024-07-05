@@ -1,32 +1,26 @@
-import fetch from 'node-fetch';
+import fetch from 'node-fetch'
 
-var handler = async (m, { text, usedPrefix, command, conn }) => {
-  if (!text) return conn.reply(m.chat, `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *іᥒgrᥱsᥱ ᥙᥒᥲ ⍴ᥱ𝗍іᥴі᥆́ᥒ*\n\n[ ❕ ]Ejemplo, ${usedPrefix}${command} BaileyBot-MD?`, m);
+var handler = async (m, { text,  usedPrefix, command }) => {
 
-  try {
-    conn.sendPresenceUpdate('composing', m);
-    var api = await fetch(`https://delirius-api-oficial.vercel.app/api/gemini?query=${encodeURIComponent(text)}`);
-    var res = await api.json();
-    console.log(res); 
+if (!text) return conn.reply(m.chat, `🚫 𝐄𝐑𝐑𝐎𝐑 🚫 *іᥒgrᥱsᥱ ᥙᥒᥲ ⍴ᥱ𝗍іᥴі᥆́ᥒ*\n\n[ ❕ ]Ejemplo, !bard ᥴ᥆ᥒ᥆ᥴᥱs BaileyBot-MD?`, m, fake, )
 
-    if (res.status === 'success') {
-      await conn.reply(m.chat, res.result, m);
-    } else {
-      throw new Error('API returned error');
-    }
-  } catch (error) {
-    console.error('Error fetching from API:', error);
-    console.error('Response status:', api.status); 
-    
-    console.error('Response text:', await api.text()); 
-    return conn.reply(m.chat, `*🚫 𝐄𝐑𝐑𝐎𝐑 🚫 Error al procesar mensaje xd*`, m);
-  }
+try {
+
+conn.sendPresenceUpdate('composing', m.chat)
+var apii = await fetch(`https://aemt.me/gemini?text=${text}`)
+var res = await apii.json()
+await m.reply(res.result)
+
+} catch (error) {
+console.error(error)
+return conn.reply(m.chat, `*🚫 𝐄𝐑𝐑𝐎𝐑 🚫 ᥆ᥴᥙrrі᥆ ᥙᥒ 𝖿ᥲᥣᥣ᥆*`, m, fake, )
 }
 
-handler.command = ['ia', 'bard'];
-handler.help = ['bard'];
-handler.tags = ['ai'];
+}
+handler.command = ['bard']
+handler.help = ['bard']
+handler.tags = ['ai']
 
-handler.premium = false;
+handler.premium = false
 
-export default handler;
+export default handler
