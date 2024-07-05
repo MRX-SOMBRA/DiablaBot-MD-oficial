@@ -284,13 +284,6 @@ try {
 await plugin.all.call(this, m, { chatUpdate, __dirname: ___dirname, __filename })
 } catch (e) {
 
-console.error(e)
-for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
-let data = (await conn.onWhatsApp(jid))[0] || {}
-if (data.exists)
-m.reply(`*⚠️ COMANDO FALLANDO ⚠️*\n\n*📑 PLUGIN :* ${name}\n*👤 USUARIO :* ${m.sender}\n*🚀 COMANDO :* ${m.text}\n\n\`\`\`${format(e)}\`\`\`\n`.trim(), data.jid)                               
-}}
-}
 
 if (!opts['restrict'])
 if (plugin.tags && plugin.tags.includes('admin')) {
