@@ -12,7 +12,7 @@ const handler = async (m, {conn, text, args, usedPrefix, command}) => {
   const texto = `_🍁 @${m.sender.split`@`[0]}  ᩭ✎Enviando Video, espere un momento...._`;
   // let buttons = [{ buttonText: { displayText: '♫ 𝙰𝚄𝙳𝙸𝙾 ♫' }, buttonId: `${usedPrefix}tomp3` }]
   try {
-m.react('🕒') 
+m.react('🪷') 
     const aa = {quoted: m, userJid: conn.user.jid};
     const prep = generateWAMessageFromContent(m.chat, {extendedTextMessage: {text: texto, contextInfo: {externalAdReply: {title: packname, body: wm, thumbnail: imagen6, sourceUrl: md}, mentionedJid: [m.sender]}}}, aa);
     await conn.relayMessage(m.chat, prep.message, {messageId: prep.key.id, mentions: [m.sender]});
