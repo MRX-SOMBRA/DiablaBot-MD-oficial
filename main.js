@@ -238,6 +238,7 @@ async function clearTmp() {
     return false
   })
 }
+
 setInterval(async () => {
 await clearTmp()
 console.log(chalk.cyan(`\n╭» 💫 𝐃𝐢𝐚𝐛𝐥𝐚𝐁𝐨𝐭-𝐌𝐃 🌠\n│→ AUTOCLEAR │ BASURA ELIMINADA \n╰― ━ ― ━ ― ━ ― ━ ― ━ ― ━ ― ― ━ ― ━ ― ━ 🌹🍁`))
