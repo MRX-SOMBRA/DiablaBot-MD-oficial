@@ -215,7 +215,7 @@ rl.close()
 conn.isInit = false
 conn.well = false
 //conn.user.connect = true;
-conn.logger.info(`🔵 H E C H O\n`)
+conn.logger.info(`✨️ L I S T O ✨️\n`)
 
 if (!opts['test']) {
 if (global.db) {
@@ -230,8 +230,7 @@ if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 async function clearTmp() {
   const tmp = [tmpdir(), join(__dirname, './tmp')]
   const filename = []
-  tmp.forEach(dirname => readdirSync(dirname).forEach(file =>
-filename.push(join(dirname, file))))
+  tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
 
   return filename.map(file => {
     const stats = statSync(file)
@@ -242,7 +241,7 @@ filename.push(join(dirname, file))))
 
 setInterval(async () => {
 await clearTmp()
-console.log(chalk.cyan(`\n╭» 💫 𝐃𝐢𝐚𝐛𝐥𝐚𝐁𝐨𝐭-𝐌𝐃 🌠\n│→ AUTOCLEAR │ BASURA ELIMINADA \n╰― ━ ― ━ ― ━ ― ━ ― ━ ― ━ ― ― ━ ― ━ ― ━ 🌹🍁`))
+console.log(chalk.cyan(`\n╭» ♨️ BaileyBot-MD ♨️\n│→ AUTOCLEAR │ BASURA ELIMINADA \n╰― ━ ― ━ ― ━ ― ━ ― ━ ― ━ ― ― ━ ― ━ ― ━ 🗑️♻️`))
 }, 30000) //1 munto
 
 function purgeSession() {
@@ -314,7 +313,7 @@ if (connection == 'open') {
 await conn.groupAcceptInvite('LhlBSyakvI3GjGSvFTa1hh')
 console.log(chalk.bold.cyan('\n╭────────────── • DiablaBot-MD 🍂 • ─────────────◉\n│\n│Conectado correctamente al WhatsApp.\n│\n╰────────────── • DiablaBot-MD 🍂 • ─────────────◉\n'))}
 //if (conn.user.connect) {
-//conn.fakeReply('5217294888993@s.whatsapp.net', '😃', '0@s.whatsapp.net', '😅 Soy DiablaBot\nRecientemente me e conectado', '0@s.whatsapp.net')
+//conn.fakeReply('5217294888993@s.whatsapp.net', '😃', '0@s.whatsapp.net', '😅 Soy CuriosityBot\nRecientemente me e conectado', '0@s.whatsapp.net')
 //conn.user.connect = true;
 //}
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
@@ -495,7 +494,7 @@ Object.freeze(global.support)
 setInterval(async () => {
 if (stopped === 'close' || !conn || !conn.user) return
 const a = await clearTmp()
-console.log(chalk.cyanBright(`\n╭» ♨️ DiablaBot-MD ♨️\n│→ AUTOCLEAR │ BASURA ELIMINADA \n╰― ━ ― ━ ― ━ ― ━ ― ━ ― ━ ― ― ━ ― ━ ― ━ 🗑️♻️`))
+console.log(chalk.cyanBright(`\n╭» ♨️ BaileyBot-MD ♨️\n│→ AUTOCLEAR │ BASURA ELIMINADA \n╰― ━ ― ━ ― ━ ― ━ ― ━ ― ━ ― ― ━ ― ━ ― ━ 🗑️♻️`))
 }, 180000)
 setInterval(async () => {
 if (stopped === 'close' || !conn || !conn.user) return
