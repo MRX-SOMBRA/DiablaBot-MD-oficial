@@ -503,4 +503,4 @@ console.log(chalk.cyanBright(`\n╭» ♨️ BaileyBot-MD ♨️\n│→ AUTOPUR
 setInterval(async () => {
 if (stopped === 'close' || !conn || !conn.user) return;
 await purgeSessionSB()
-console.log(chalk.cyanBright
+console.log(chalk.cyanBright)
